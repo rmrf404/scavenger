@@ -2,6 +2,8 @@
 
 A browser-based vampire-survival style canvas game built from the supplied sci-fi asset sheets.
 
+Play it on Wavedash: https://wavedash.com/games/scavenger
+
 ## Run
 
 ```sh
