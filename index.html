@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#11130f" />
+    <title>Scavenger: Iron Swarm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-label="Scavenger: Iron Swarm">
+      <canvas id="game" aria-label="Game canvas"></canvas>
+
+      <section id="hud" aria-hidden="true">
+        <div class="top-bar">
+          <div class="pilot">
+            <img src="assets/sprites/portrait.png" alt="" />
+            <div>
+              <strong>Scavenger</strong>
+              <span id="rank">Rank 1</span>
+            </div>
+          </div>
+          <div class="meters">
+            <div class="meter health"><i id="hpFill"></i><span>Hull</span><em id="hpText">140 / 140</em></div>
+            <div class="meter energy"><i id="xpFill"></i><span>XP</span><em id="xpText">0 / 8</em></div>
+          </div>
+          <div class="status">
+            <strong id="timer">00:00</strong>
+            <span id="kills">0 Scrap</span>
+          </div>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat-chip"><span>DMG</span><strong id="statDamage">x1.00</strong></div>
+          <div class="stat-chip"><span>RATE</span><strong id="statRate">x1.00</strong></div>
+          <div class="stat-chip"><span>SPD</span><strong id="statSpeed">245</strong></div>
+          <div class="stat-chip"><span>PULL</span><strong id="statMagnet">240</strong></div>
+        </div>
+
+        <div id="loadout" class="loadout"></div>
+
+        <canvas id="minimap" width="146" height="146" aria-hidden="true"></canvas>
+        <div id="skillToast" class="skill-toast" aria-hidden="true"></div>
+      </section>
+
+      <section id="menu" class="overlay">
+        <div class="frame">
+          <h1>Scavenger: Iron Swarm</h1>
+          <p>Survive the machine hive, collect cores, and stack upgrades before the reactor goes critical.</p>
+          <button id="startBtn" type="button">Start Run</button>
+        </div>
+      </section>
+
+      <section id="upgrade" class="overlay hidden">
+        <div class="frame upgrade-frame">
+          <div class="upgrade-head">
+            <span id="upgradeRank">Rank 1</span>
+            <h2>Choose Upgrade</h2>
+          </div>
+          <div id="upgradeCards" class="upgrade-cards"></div>
+        </div>
+      </section>
+
+      <section id="gameOver" class="overlay hidden">
+        <div class="frame">
+          <h2 id="endTitle">Run Complete</h2>
+          <p id="endStats"></p>
+          <button id="restartBtn" type="button">Deploy Again</button>
+        </div>
+      </section>
+
+      <button id="muteBtn" class="icon-button mute-button" type="button" aria-label="Mute audio" aria-pressed="false">&#9834;</button>
+      <button id="pauseBtn" class="icon-button" type="button" aria-label="Pause">II</button>
+      <div id="touchStick" aria-hidden="true"><i></i></div>
+    </main>
+
+    <script defer src="src/game.js"></script>
+  </body>
+</html>

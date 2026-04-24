@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+
+  <defs>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".62"/>
+    </filter>
+    <filter id="glowCyan" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowAmber" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#f4aa39" flood-opacity=".72"/>
+    </filter>
+    <linearGradient id="plate" x1="22" y1="18" x2="106" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#293c3c"/><stop offset=".52" stop-color="#111d1e"/><stop offset="1" stop-color="#070d0e"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="18" y1="18" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8ac92"/><stop offset=".46" stop-color="#6e624f"/><stop offset="1" stop-color="#2b251d"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="16" y1="12" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d58d49"/><stop offset=".44" stop-color="#8c431e"/><stop offset="1" stop-color="#2a1810"/>
+    </linearGradient>
+  </defs>
+
+<rect width="128" height="128" fill="none"/>
+<g transform="translate(2 2) scale(.96875)">
+
+    <g filter="url(#soft)">
+      <path d="M34 24h60l12 12v58l-12 12H34L22 94V36z" fill="url(#plate)" stroke="#2a605f" stroke-width="3"/>
+      <path d="M40 31h48l9 9v48l-9 9H40l-9-9V40z" fill="#071516" stroke="#6b5a40" stroke-width="2"/>
+      <path d="M31 39h13M84 31v12M97 54h-12M44 97v-12" stroke="#b17a3a" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="64" cy="64" r="30" fill="#0b2527" stroke="#397f7d" stroke-width="2"/>
+      <path d="M76 27l-23 33h18L52 99l35-49H68z" fill="#54f0ee" filter="url(#glowCyan)"/>
+      <path d="M51 74c10 3 22 1 32-8M45 55c9-7 22-10 35-8" fill="none" stroke="#bffefd" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    </g>
+</g>
+</svg>

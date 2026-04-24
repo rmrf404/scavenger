@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+
+  <defs>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".62"/>
+    </filter>
+    <filter id="glowCyan" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowAmber" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#f4aa39" flood-opacity=".72"/>
+    </filter>
+    <linearGradient id="plate" x1="22" y1="18" x2="106" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#293c3c"/><stop offset=".52" stop-color="#111d1e"/><stop offset="1" stop-color="#070d0e"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="18" y1="18" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8ac92"/><stop offset=".46" stop-color="#6e624f"/><stop offset="1" stop-color="#2b251d"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="16" y1="12" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d58d49"/><stop offset=".44" stop-color="#8c431e"/><stop offset="1" stop-color="#2a1810"/>
+    </linearGradient>
+  </defs>
+
+<rect width="128" height="128" fill="none"/>
+<g transform="translate(2 2) scale(.96875)">
+
+    <g filter="url(#soft)">
+      <rect x="33" y="27" width="62" height="74" rx="9" fill="url(#metal)" stroke="#2d2520" stroke-width="3"/>
+      <rect x="43" y="38" width="42" height="52" rx="5" fill="#102325" stroke="#8b6c3f" stroke-width="2"/>
+      <path d="M43 52h42M43 65h42M43 78h42" stroke="#243f40" stroke-width="2"/>
+      <path d="M49 69l10-17 8 13 13-24-8 25h12L62 90l6-21z" fill="#54f0ee" filter="url(#glowCyan)"/>
+      <g stroke="#c8994e" stroke-width="4" stroke-linecap="round">
+        <path d="M28 40h8M28 54h8M28 68h8M28 82h8M92 40h8M92 54h8M92 68h8M92 82h8"/>
+      </g>
+    </g>
+</g>
+</svg>

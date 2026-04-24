@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+
+  <defs>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".62"/>
+    </filter>
+    <filter id="glowCyan" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowAmber" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#f4aa39" flood-opacity=".72"/>
+    </filter>
+    <linearGradient id="plate" x1="22" y1="18" x2="106" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#293c3c"/><stop offset=".52" stop-color="#111d1e"/><stop offset="1" stop-color="#070d0e"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="18" y1="18" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8ac92"/><stop offset=".46" stop-color="#6e624f"/><stop offset="1" stop-color="#2b251d"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="16" y1="12" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d58d49"/><stop offset=".44" stop-color="#8c431e"/><stop offset="1" stop-color="#2a1810"/>
+    </linearGradient>
+  </defs>
+
+<rect width="128" height="128" fill="none"/>
+<g transform="translate(2 2) scale(.96875)">
+
+    <g filter="url(#soft)">
+      <path d="M34 24h60l12 12v58l-12 12H34L22 94V36z" fill="url(#plate)" stroke="#3c4032" stroke-width="3"/>
+      <path d="M40 31h48l9 9v48l-9 9H40l-9-9V40z" fill="#15110b" stroke="#6b5a40" stroke-width="2"/>
+      <circle cx="64" cy="66" r="31" fill="#21130a" stroke="#a75a25" stroke-width="3"/>
+      <path d="M64 25l8 26 22-16-14 25 29 2-27 9 18 22-25-13-4 29-9-27-21 19 11-27-29 1 25-14-19-21 26 10z" fill="#f4aa39" filter="url(#glowAmber)"/>
+      <path d="M64 45l5 17 15-10-10 15 18 2-17 6 11 14-17-8-4 19-6-18-15 12 8-18-19 1 17-9-12-14 18 7z" fill="#f26a24"/>
+    </g>
+</g>
+</svg>
